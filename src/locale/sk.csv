@@ -1,0 +1,5 @@
+"pdf01","Dokument vytvorený dňa [[date_d]].[[date_m]].[[date_y]]"
+"pdf02","Dokument vytvorený o [[date_h]]:[[date_i]]"
+"pdf03","Dokument vytvorený dňa [[date_d]].[[date_m]].[[date_y]] o [[date_h]]:[[date_i]]"
+"pdf04","Stránka [[page_cu]]/[[page_nb]]"
+"pdf05","Formuláre vyžadujú Adobe Reader 9"
