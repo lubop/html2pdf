@@ -100,6 +100,7 @@ class Html2Pdf
     protected $_isInLink         = '';          // flag : is in a link. empty / href of the link
     protected $_isInParagraph    = false;       // flag : is in a paragraph
     protected $_isForOneLine     = false;       // flag : in a specific sub html2pdf to have the height of the next line
+    protected $_pdfa             = false;       // flag : generate a PDF/A document
 
     protected $_maxX             = 0;           // maximum X of the current zone
     protected $_maxY             = 0;           // maximum Y of the current zone
@@ -380,7 +381,7 @@ class Html2Pdf
      *
      * @return Html2Pdf $this
      */
-    public function setModeDebug(DebugInterface $debugObject = null)
+    public function setModeDebug(?DebugInterface $debugObject = null)
     {
         if (is_null($debugObject)) {
             $this->debug = new Debug();

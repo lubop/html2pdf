@@ -20,6 +20,7 @@ class MyPdf extends \TCPDF
     protected $_transf      = array();
     protected $_myLastPageGroup = null;
     protected $_myLastPageGroupNb = 0;
+    protected $ws = 0.;
 
     // used to make a radius with bezier : (4/3 * (sqrt(2) - 1))
     const MY_ARC = 0.5522847498;
@@ -1433,7 +1434,7 @@ class MyPdf extends \TCPDF
                 //Filling dots
                 $w=$this->w-$this->lMargin-$this->rMargin-$pageCellSize-($level*8)-($strsize+2);
                 $nb=$w/$this->GetStringWidth('.');
-                $dots=str_repeat('.', $nb);
+                $dots=str_repeat('.', max(0, (int) $nb));
                 $this->Cell($w, $this->FontSize+2, $dots, 0, 0, 'R');
 
                 //Page number

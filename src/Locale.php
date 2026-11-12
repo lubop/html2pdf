@@ -81,7 +81,7 @@ class Locale
         self::$list = array();
         $handle = fopen($file, 'r');
         while (!feof($handle)) {
-            $line = fgetcsv($handle);
+            $line = fgetcsv($handle, null, ",", "\"", "");
             if (!is_array($line) || count($line) !=2) {
                 continue;
             }
