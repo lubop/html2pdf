@@ -37,8 +37,10 @@
  */
 
 // If you define the constant K_TCPDF_EXTERNAL_CONFIG, the following settings will be ignored.
+// They are also skipped when TCPDF has already loaded its own config (K_PATH_MAIN defined),
+// because redefining constants raises warnings (an error in PHP 9).
 
-if (!defined('K_TCPDF_EXTERNAL_CONFIG')) {
+if (!defined('K_TCPDF_EXTERNAL_CONFIG') && !defined('K_PATH_MAIN')) {
 
     define('K_TCPDF_EXTERNAL_CONFIG', true);
 
